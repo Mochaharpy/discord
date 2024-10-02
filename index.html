@@ -40,19 +40,17 @@
         <div id="errorMessage" style="display: none;">
             <p>Oops! Unable to load the feature.</p>
             <button id="reloadButton">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Reload_icon.svg/1024px-Reload_icon.svg.png" alt="Reload" style="width: 20px; vertical-align: middle; margin-right: 5px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Reload_icon.svg" alt="Reload" style="width: 20px; vertical-align: middle; margin-right: 5px;">
                 Reload
             </button>
         </div>
     </div>
     <script>
-        // Generate a random delay between 2000ms (2 seconds) and 25000ms (25 seconds)
-        const randomDelay = Math.floor(Math.random() * (3000 - 2000 + 1)) + 2000;
-
+        // Fixed delay of 3 seconds
         setTimeout(() => {
             document.querySelector('.loading').style.display = 'none'; // Hide the loading message
             document.getElementById('errorMessage').style.display = 'block'; // Show the error message
-        }, randomDelay);
+        }, 3000);
 
         // Add event listener to the reload button
         document.getElementById('reloadButton').addEventListener('click', () => {
